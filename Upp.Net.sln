@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upp.Net.Platform", "Source\Upp.Net.Platform\Upp.Net.Platform.csproj", "{479D7C35-0BDF-460B-AD27-1A238C501317}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Upp.Net.Platform.Shared", "Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.shproj", "{E1F4483B-2DC9-46C3-9818-3DABFEBBBDCB}"
+EndProject
+Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{479d7c35-0bdf-460b-ad27-1a238c501317}*SharedItemsImports = 4
+		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{e1f4483b-2dc9-46c3-9818-3dabfebbbdcb}*SharedItemsImports = 13
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{479D7C35-0BDF-460B-AD27-1A238C501317}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{479D7C35-0BDF-460B-AD27-1A238C501317}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{479D7C35-0BDF-460B-AD27-1A238C501317}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{479D7C35-0BDF-460B-AD27-1A238C501317}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FA8C0201-92F4-4857-8CCB-1456AE2DF7F0}
+	EndGlobalSection
+EndGlobal
