@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using Upp.Net.Platform;
 using Upp.Net.Serialization;
-using Upp.Net.Sockets.Types;
 using Upp.Net.Trace;
 using Xunit;
 

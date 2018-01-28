@@ -1,8 +1,4 @@
-﻿using System;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Upp.Net.UnitTests
+﻿namespace Upp.Net.UnitTests
 {
     class Holder
     {

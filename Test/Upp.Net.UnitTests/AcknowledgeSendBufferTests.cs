@@ -1,6 +1,4 @@
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using Xunit;
 
 namespace Upp.Net.UnitTests
@@ -13,11 +11,10 @@ namespace Upp.Net.UnitTests
         {
             var sut = new AcknowledgeSendBuffer<Holder>();
             var holder = new Holder(123);
-            int id;
-            sut.Add(holder, out id);
+            sut.Add(holder, out _);
             var list = new List<Holder>();
             sut.GetAllUnconfirmed(list);
-            Assert.Equal(0, list.Count);
+            Assert.Empty(list);
         }
 
         [Fact]
@@ -25,15 +22,13 @@ namespace Upp.Net.UnitTests
         {
             var sut = new AcknowledgeSendBuffer<Holder>();
             var holder = new Holder(123);
-            int id;
-            sut.Add(holder, out id);
+            sut.Add(holder, out _);
             var holder2 = new Holder(323);
-            int id2;
-            sut.Add(holder2, out id2);
+            sut.Add(holder2, out _);
             sut.Ack(1, 0);
             var list = new List<Holder>();
             sut.GetAllUnconfirmed(list);
-            Assert.Equal(0, list.Count);
+            Assert.Empty(list);
         }
 
         [Fact]
@@ -41,15 +36,13 @@ namespace Upp.Net.UnitTests
         {
             var sut = new AcknowledgeSendBuffer<Holder>();
             var holder = new Holder(123);
-            int id;
-            sut.Add(holder, out id);
+            sut.Add(holder, out _);
             var holder2 = new Holder(323);
-            int id2;
-            sut.Add(holder2, out id2);
+            sut.Add(holder2, out _);
             sut.Ack(2, 0);
             var list = new List<Holder>();
             sut.GetAllUnconfirmed(list);
-            Assert.Equal(1, list.Count);
+            Assert.Single(list);
             Assert.Equal(holder, list[0]);
         }
 
@@ -60,11 +53,10 @@ namespace Upp.Net.UnitTests
             var list = new List<Holder>();
             for (int i = 0; i < 200000; i++)
             {
-                int id;
-                sut.Add(new Holder(i), out id);
+                sut.Add(new Holder(i), out _);
                 sut.Ack(1, (ushort)i);
                 sut.GetAllUnconfirmed(list);
-                Assert.Equal(0, list.Count);
+                Assert.Empty(list);
             }
         }
 
@@ -76,14 +68,11 @@ namespace Upp.Net.UnitTests
             // produce gaps so there are no unconfirmed pakets
 
             var sut = new AcknowledgeSendBuffer<Holder>();
-            var sent = new List<Holder>();
             var unconfirmedPakets = new List<Holder>();
             for (int i = 0; i < 5; i++)
             {
                 var holder = new Holder(i);
-                int id;
-                sut.Add(holder, out id);
-                sent.Add(holder);
+                sut.Add(holder, out _);
             }
 
             //  0000 0000 00ss ssss
@@ -94,13 +83,11 @@ namespace Upp.Net.UnitTests
             for (int i = 5; i < 250000; i++)
             {
                 var holder = new Holder(i);
-                int id;
-                sut.Add(holder, out id);
-                sent.Add(holder);
+                sut.Add(holder, out _);
                 sut.Ack(1, (ushort)(i - 3));
                 unconfirmedPakets.Clear();
                 sut.GetAllUnconfirmed(unconfirmedPakets);
-                Assert.Equal(0, unconfirmedPakets.Count);
+                Assert.Empty(unconfirmedPakets);
             }
         }
 
@@ -113,8 +100,7 @@ namespace Upp.Net.UnitTests
             for (int i = 0; i < 12; i++)
             {
                 var holder = new Holder(i);
-                int id;
-                sut.Add(holder, out id);
+                sut.Add(holder, out _);
                 sent.Add(holder);
             }
             // 0000 0110 0000 0000
