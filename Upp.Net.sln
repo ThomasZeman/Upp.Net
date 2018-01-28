@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upp.Net.Platform.DotNet", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upp.Net.Platform.Android", "Source\Upp.Net.Platform.Android\Upp.Net.Platform.Android.csproj", "{56A56F17-7DE1-4CA1-9617-BF32E971AC84}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upp.Net", "Source\Upp.Net\Upp.Net.csproj", "{3933F446-CA0B-4F02-82E6-C36E39C336F6}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{479d7c35-0bdf-460b-ad27-1a238c501317}*SharedItemsImports = 4
@@ -63,6 +65,18 @@ Global
 		{56A56F17-7DE1-4CA1-9617-BF32E971AC84}.Release|ARM.Build.0 = Release|Any CPU
 		{56A56F17-7DE1-4CA1-9617-BF32E971AC84}.Release|x64.ActiveCfg = Release|Any CPU
 		{56A56F17-7DE1-4CA1-9617-BF32E971AC84}.Release|x64.Build.0 = Release|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Debug|ARM.Build.0 = Debug|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Debug|x64.Build.0 = Debug|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Release|ARM.ActiveCfg = Release|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Release|ARM.Build.0 = Release|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Release|x64.ActiveCfg = Release|Any CPU
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
