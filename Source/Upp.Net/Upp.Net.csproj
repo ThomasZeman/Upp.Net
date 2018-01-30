@@ -73,9 +73,16 @@
     <ProjectReference Include="..\Upp.Net.Platform\Upp.Net.Platform.csproj">
       <Project>{479d7c35-0bdf-460b-ad27-1a238c501317}</Project>
       <Name>Upp.Net.Platform</Name>
+      <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>xcopy Upp.Net.dll ..\..\Android\AnyCPU\$(Configuration) /y
+xcopy Upp.Net.pdb ..\..\Android\AnyCPU\$(Configuration) /y
+xcopy Upp.Net.dll ..\..\Windows\x86\$(Configuration) /y
+xcopy Upp.Net.pdb ..\..\Windows\x86\$(Configuration) /y</PostBuildEvent>
+  </PropertyGroup>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

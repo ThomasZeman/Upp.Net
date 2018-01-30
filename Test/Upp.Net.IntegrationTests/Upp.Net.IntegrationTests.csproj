@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{2A74D9AB-D6D7-485B-9DDD-010AA4FA69DA}</ProjectGuid>
+    <ProjectGuid>{FF7A0504-EC59-4A1F-934D-5626FF1627D1}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Upp.Net.UnitTests</RootNamespace>
-    <AssemblyName>Upp.Net.UnitTests</AssemblyName>
+    <RootNamespace>Upp.Net.IntegrationTests</RootNamespace>
+    <AssemblyName>Upp.Net.IntegrationTests</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <NuGetPackageImportStamp>
@@ -23,6 +23,8 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>Upp.Net.IntegrationTests.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -31,6 +33,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <CodeAnalysisRuleSet>Upp.Net.IntegrationTests.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -57,20 +61,24 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ByFramePlayoutBufferTests.cs" />
-    <Compile Include="OrderedAcknowledgePlayoutBufferTests.cs" />
-    <Compile Include="ConverterTests.cs" />
-    <Compile Include="Holder.cs" />
+    <Compile Include="ClientTests.cs" />
+    <Compile Include="ConsoleTrace.cs" />
+    <Compile Include="FastTimeFormatter.cs" />
+    <Compile Include="FileTrace.cs" />
+    <Compile Include="Trace.cs" />
+    <Compile Include="MemoryTrace.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="AcknowledgeSendBufferTests.cs" />
-    <Compile Include="SimpleTypeWriterReaderTests.cs" />
-    <Compile Include="UnreliableOrderedConnectionTests.cs" />
+    <Compile Include="RemoteServer.cs" />
+    <Compile Include="ServerConnection.cs" />
+    <Compile Include="ServerDiscoveryTests.cs" />
+    <Compile Include="TestControl.cs" />
+    <Compile Include="TestData.cs" />
+    <Compile Include="UdpListenerTests.cs" />
+    <Compile Include="Wait.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Analyzer Include="..\..\packages\xunit.analyzers.0.7.0\analyzers\dotnet\cs\xunit.analyzers.dll" />
+    <None Include="Upp.Net.IntegrationTests.ruleset" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
