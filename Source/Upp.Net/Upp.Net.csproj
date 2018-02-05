@@ -70,11 +70,7 @@
     <Compile Include="UnreliableUnorderedConnection.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Upp.Net.Platform\Upp.Net.Platform.csproj">
-      <Project>{479d7c35-0bdf-460b-ad27-1a238c501317}</Project>
-      <Name>Upp.Net.Platform</Name>
-      <Private>False</Private>
-    </ProjectReference>
+    <Reference Include="Upp.Net.Platform" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <PropertyGroup>
@@ -90,4 +86,11 @@ xcopy Upp.Net.pdb ..\..\Windows\x86\$(Configuration) /y</PostBuildEvent>
   <Target Name="AfterBuild">
   </Target>
   -->
+  <Target Name="BeforeResolveReferences">
+    <CreateProperty
+      Value="$(OutputPath);$(AssemblySearchPaths)">
+      <Output TaskParameter="Value"
+        PropertyName="AssemblySearchPaths" />
+    </CreateProperty>
+  </Target>
 </Project>
