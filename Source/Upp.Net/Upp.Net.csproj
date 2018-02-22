@@ -76,9 +76,9 @@
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
-    <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Android\AnyCPU\$(Configuration)" ContinueOnError="false"/>
-    <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Windows\x86\$(Configuration)" ContinueOnError="false"/>
-    <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Windows\x64\$(Configuration)" ContinueOnError="false"/>    
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.*" DestinationFolder="$(OutputPath)..\..\Android\AnyCPU\$(Configuration)" ContinueOnError="false"/>
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.*" DestinationFolder="$(OutputPath)..\..\Windows\x86\$(Configuration)" ContinueOnError="false"/>
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.*" DestinationFolder="$(OutputPath)..\..\Windows\x64\$(Configuration)" ContinueOnError="false"/>    
   </Target>
   <Target Name="BeforeResolveReferences">
     <CreateProperty
