@@ -73,19 +73,13 @@
     <Reference Include="Upp.Net.Platform" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
-  <PropertyGroup>
-    <PostBuildEvent>xcopy Upp.Net.dll ..\..\Android\AnyCPU\$(Configuration) /y
-xcopy Upp.Net.pdb ..\..\Android\AnyCPU\$(Configuration) /y
-xcopy Upp.Net.dll ..\..\Windows\x86\$(Configuration) /y
-xcopy Upp.Net.pdb ..\..\Windows\x86\$(Configuration) /y</PostBuildEvent>
-  </PropertyGroup>
-  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-       Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>
   <Target Name="AfterBuild">
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Android\AnyCPU\$(Configuration)" ContinueOnError="false"/>
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Windows\x86\$(Configuration)" ContinueOnError="false"/>
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Windows\x64\$(Configuration)" ContinueOnError="false"/>    
   </Target>
-  -->
   <Target Name="BeforeResolveReferences">
     <CreateProperty
       Value="$(OutputPath);$(AssemblySearchPaths)">
