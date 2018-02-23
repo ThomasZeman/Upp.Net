@@ -1,0 +1,13 @@
+stages:
+  - build
+
+before_script:
+  - 'nuget restore'
+
+build:
+ stage: build
+ script:
+  - 'msbuild /t:Clean,ReBuild /p:Configuration=Debug;Platform="Any CPU"'
+  - 'msbuild /t:ReBuild /p:Configuration=Release;Platform="Any CPU"'
+ only:
+   - master
