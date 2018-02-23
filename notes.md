@@ -1,6 +1,6 @@
-# Why not compile code as a whole for Android and so on
+# Why not compile code as a whole for e.g. Android, .NET and others
 
-Consumer might be or are target platform agnostic so could be PCLs or NetStandard Libaries themselves. They would not be able to consume a target platform specific assembly. In the worst case this would lead to the necessity to provide all public APIs as stubs.
+Consumers might be or are target platform agnostic and therefore could be PCLs or .net standard Libaries themselves. Would not be able to consume a target platform specific assembly. In worst case this would lead to the necessity to provide all public APIs as stubs.
 
 # Why not have all code in a .net standard assembly
 
