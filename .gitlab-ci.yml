@@ -1,5 +1,6 @@
 stages:
   - build
+  - test
 
 before_script:
   - 'nuget restore'
@@ -11,3 +12,9 @@ build:
   - 'msbuild /t:ReBuild /p:Configuration=Release;Platform="Any CPU"'
  only:
    - master
+
+test:
+ stage: test
+ script:
+  - ./packages/xunit.runner.console.2.4.0-beta.1.build3958/tools/net452/xunit.console.exe ./bin/Windows/x86/Debug/Upp.Net.IntegrationTests.dll
+  - ./packages/xunit.runner.console.2.4.0-beta.1.build3958/tools/net452/xunit.console.exe ./bin/Windows/x86/Debug/Upp.Net.UnitTests.dll
