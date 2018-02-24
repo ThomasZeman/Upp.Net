@@ -10,6 +10,10 @@ build:
  script:
   - 'msbuild /t:Clean,ReBuild /p:Configuration=Debug;Platform="Any CPU"'
   - 'msbuild /t:ReBuild /p:Configuration=Release;Platform="Any CPU"'
+ artifacts:
+   paths:
+   - bin/
+   - packages/
  only:
    - master
 
