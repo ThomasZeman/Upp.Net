@@ -11,7 +11,7 @@ namespace Upp.Net.IntegrationTests
 {
     public class ServerDiscoveryTests
     {
-        [Fact]
+        [Fact(Skip="Needs different CI setup")]
         public void SendDiscoveryRequest_TwoServersRespond()
         {
             // This test should test with more than one server but that would mean to have more local ips
