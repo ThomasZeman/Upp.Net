@@ -18,3 +18,5 @@ test:
  script:
   - ./packages/xunit.runner.console.2.4.0-beta.1.build3958/tools/net452/xunit.console.exe ./bin/Windows/x86/Debug/Upp.Net.IntegrationTests.dll
   - ./packages/xunit.runner.console.2.4.0-beta.1.build3958/tools/net452/xunit.console.exe ./bin/Windows/x86/Debug/Upp.Net.UnitTests.dll
+ dependencies:
+  - build
