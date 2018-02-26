@@ -6,41 +6,53 @@ namespace Upp.Net.IntegrationTests
 {
     internal class MemoryTrace : ITrace
     {
-        public List<string> List { get; } = new List<string>();
+        private readonly List<string> _list = new List<string>();
+
+        public int Count => _list.Count;
+
+        public List<string> GetTrace()
+        {
+            return new List<string>(_list);
+        }
 
         public void Info(string message, params object[] arguments)
         {
-            List.Add(string.Format(message, arguments));
+            _list.Add(string.Format(message, arguments));
         }
 
         public void Error(string message, params object[] arguments)
         {
-            List.Add(string.Format(message, arguments));
+            _list.Add(string.Format(message, arguments));
         }
 
         public void Exception(Exception exception)
         {
-            List.Add(exception.ToString());
+            _list.Add(exception.ToString());
         }
 
         public void Debug(string message, params object[] arguments)
         {
-            List.Add(string.Format(message, arguments));
+            _list.Add(string.Format(message, arguments));
         }
 
         public void Info(string message)
         {
-            List.Add(message);
+            _list.Add(message);
         }
 
         public void Error(string message)
         {
-            List.Add(message);
+            _list.Add(message);
         }
 
         public void Debug(string message)
         {
-            List.Add(message);
+            _list.Add(message);
+        }
+
+        public override string ToString()
+        {
+            return string.Join(Environment.NewLine, _list);
         }
     }
 }

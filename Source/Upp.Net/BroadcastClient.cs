@@ -23,7 +23,7 @@ namespace Upp.Net
         {
             _listenerBase = new ListenerBase(localEndpoint, trace);
             _listenerBase.MessageReceived += MessageReceived;
-            var broadcastClient = _listenerBase.Client.ForkSendTo(new IpEndpoint(new IpAddress("255.255.255.255"), targetPort));
+            var broadcastClient = _listenerBase.Listener.ForkSendTo(new IpEndpoint(new IpAddress("255.255.255.255"), targetPort));
             Connection = new UnreliableUnorderedConnection(broadcastClient, connectionId, trace);
         }
 

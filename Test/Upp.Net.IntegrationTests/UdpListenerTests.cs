@@ -10,13 +10,13 @@ namespace Upp.Net.IntegrationTests
         {
             var log = new MemoryTrace();
             var listener = new ListenerBase(new IpEndpoint(IpAddress.AnyAddress, 3333), log);
-            Assert.Equal(0, log.List.Count);
+            Assert.Equal(0, log.Count);
             listener.Start();
-            Assert.Contains(MessageLoop<ListenerBase>.StartingLoopMessage, log.List);
-            var preCount = log.List.Count;
+            Assert.True(Wait.UntilTrue(
+                    () => log.GetTrace().Contains(MessageLoop<ListenerBase>.StartingLoopMessage)), log.ToString());
             listener.Dispose();
-            Assert.True(Wait.UntilTrue(() => log.List.Count == preCount + 1));
-            Assert.Contains(MessageLoop<ListenerBase>.StoppingLoopMessage, log.List);
+            Assert.True(Wait.UntilTrue(
+                () => log.GetTrace().Contains(MessageLoop<ListenerBase>.StoppingLoopMessage)), log.ToString());
         }
     }
 }

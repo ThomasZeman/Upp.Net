@@ -31,15 +31,18 @@ namespace Upp.Net
             {
                 throw new ObjectDisposedException("Server");
             }
+
             if (_started)
             {
                 throw new InvalidOperationException("StartReceiving can only be called once");
             }
+
             _started = true;
             _stop = false;
             _trace.Info("Creating UdpListener");
             Thread.Start("ReceiverThreadServer", Run);
         }
+
         private void Run()
         {
             _trace.Info(StartingLoopMessage);
@@ -76,10 +79,7 @@ namespace Upp.Net
             {
                 _trace.Info(StoppingLoopMessage);
                 _started = false;
-                if (_disposed)
-                {
-                    _socket.Dispose();
-                }
+                _socket.Dispose();
             }
         }
 

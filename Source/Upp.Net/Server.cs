@@ -52,7 +52,7 @@ namespace Upp.Net
             ServerPeer serverPeer;
             if (!_serverPeers.TryGetValue(ipEndpoint, out serverPeer))
             {
-                serverPeer = new ServerPeer(ipEndpoint, _listenerBase.Client.ForkSendTo(ipEndpoint), _trace);
+                serverPeer = new ServerPeer(ipEndpoint, _listenerBase.Listener.ForkSendTo(ipEndpoint), _trace);
                 _serverPeers.Add(ipEndpoint, serverPeer);
                 OnNewServerPeer(this, serverPeer);
             }
