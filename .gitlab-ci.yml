@@ -29,6 +29,10 @@ test:
 deploy:
  stage: deploy
  script:
+  - echo $CI_BUILD_ID
+  - echo $CI_PIPELINE_ID
+  - echo $CI_SERVER
+  - echo $GITLAB_CI
   - nuget pack -Version $CI_PIPELINE_ID
   - nuget add *.nupkg -source /mnt/nuget/
  dependencies:
