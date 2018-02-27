@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Upp.Net</id>
+    <version>0.0.0</version>
+    <authors>UPP</authors>
+    <owners>UPP</owners>
+    <licenseUrl>https://github.com/ThomasZeman/Upp.Net/blob/master/LICENSE</licenseUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Experimental UDP library</description>
+    <releaseNotes>not available</releaseNotes>
+    <copyright>Copyright 2018</copyright>
+    <tags></tags>
+  </metadata>
+  <files>
+    <file src="bin/Android/AnyCPU/Release/Upp.Net.Platform.dll" target="lib/MonoAndroid60" />
+    <file src="bin/Android/AnyCPU/Release/Upp.Net.Platform.pdb" target="lib/MonoAndroid60" />
+    <file src="bin/Android/AnyCPU/Release/Upp.Net.dll" target="lib/MonoAndroid60" />
+    <file src="bin/Android/AnyCPU/Release/Upp.Net.pdb" target="lib/MonoAndroid60" />
+
+    <file src="bin/Windows/x86/Release/Upp.Net.Platform.dll" target="lib/net452" />
+    <file src="bin/Windows/x86/Release/Upp.Net.Platform.pdb" target="lib/net452" />
+    <file src="bin/Windows/x86/Release/Upp.Net.dll" target="lib/net452" />
+    <file src="bin/Windows/x86/Release/Upp.Net.pdb" target="lib/net452" />
+
+    <file src="bin/Pcl/Release/Upp.Net.dll" target="lib/portable-net451+netcore451" />
+    <file src="bin/Pcl/Release/Upp.Net.pdb" target="lib/portable-net451+netcore451" />
+    <file src="bin/Pcl/Release/Upp.Net.Platform.dll" target="lib/portable-net451+netcore451" />
+    <file src="bin/Pcl/Release/Upp.Net.Platform.pdb" target="lib/portable-net451+netcore451" />
+  </files>
+</package>

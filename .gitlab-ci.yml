@@ -33,7 +33,7 @@ deploy:
   - echo $CI_PIPELINE_ID
   - echo $CI_SERVER
   - echo $GITLAB_CI
-  - nuget pack -Version $CI_PIPELINE_ID
+  - nuget pack -Version 0.$CI_PIPELINE_ID.0
   - nuget add *.nupkg -source /mnt/nuget/
  dependencies:
   - build
