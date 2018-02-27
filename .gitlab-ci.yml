@@ -29,7 +29,6 @@ test:
 deploy:
  stage: deploy
  script:
-  - nuget pack -Version $CI_BUILD_ID
   - nuget pack -Version $CI_PIPELINE_ID
   - nuget add *.nupkg -source /mnt/nuget/
  dependencies:
