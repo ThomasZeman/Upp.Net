@@ -187,3 +187,9 @@ pip-log.txt
 #Mr Developer
 .mr.developer.cfg
 *.ide
+/.vs/Upp.Net/v15/sqlite3/storage.ide-wal
+/.vs/Upp.Net/v15/sqlite3/storage.ide-shm
+/.vs/Upp.Net/v15/sqlite3/db.lock
+/.vs/Upp.Net/v15/Server/sqlite3/storage.ide-wal
+/.vs/Upp.Net/v15/Server/sqlite3/storage.ide-shm
+/.vs/Upp.Net/v15/Server/sqlite3/db.lock

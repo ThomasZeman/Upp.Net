@@ -53,6 +53,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="BaitAndSwitch.cs" />
+    <Compile Include="Device.cs" />
     <Compile Include="Thread.cs" />
     <Compile Include="Timer.cs" />
     <Compile Include="UdpClient.cs" />

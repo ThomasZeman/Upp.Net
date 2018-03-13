@@ -51,6 +51,7 @@
     <Compile Include="..\Upp.Net.Platform.DotNet\Timer.cs" />
     <Compile Include="..\Upp.Net.Platform.DotNet\UdpClient.cs" />
     <Compile Include="..\Upp.Net.Platform.DotNet\UdpListener.cs" />
+    <Compile Include="Device.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="..\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems" Label="Shared" />
