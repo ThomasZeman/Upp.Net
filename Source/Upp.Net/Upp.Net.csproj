@@ -77,9 +77,11 @@
   </Target>
   <Target Name="AfterBuild">
     <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Android\AnyCPU\$(Configuration)" ContinueOnError="false"/>
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\iOS\AnyCPU\$(Configuration)" ContinueOnError="false"/>
     <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Windows\x86\$(Configuration)" ContinueOnError="false"/>
     <Copy SourceFiles="$(OutputPath)\Upp.Net.dll" DestinationFolder="$(OutputPath)..\..\Windows\x64\$(Configuration)" ContinueOnError="false"/>    
     <Copy SourceFiles="$(OutputPath)\Upp.Net.pdb" DestinationFolder="$(OutputPath)..\..\Android\AnyCPU\$(Configuration)" ContinueOnError="false"/>
+    <Copy SourceFiles="$(OutputPath)\Upp.Net.pdb" DestinationFolder="$(OutputPath)..\..\iOS\AnyCPU\$(Configuration)" ContinueOnError="false"/>
     <Copy SourceFiles="$(OutputPath)\Upp.Net.pdb" DestinationFolder="$(OutputPath)..\..\Windows\x86\$(Configuration)" ContinueOnError="false"/>
     <Copy SourceFiles="$(OutputPath)\Upp.Net.pdb" DestinationFolder="$(OutputPath)..\..\Windows\x64\$(Configuration)" ContinueOnError="false"/>    
   </Target>

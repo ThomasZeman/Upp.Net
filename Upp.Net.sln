@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upp.Net.Platform", "Source\Upp.Net.Platform\Upp.Net.Platform.csproj", "{479D7C35-0BDF-460B-AD27-1A238C501317}"
 EndProject
@@ -30,10 +30,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upp.Net.IntegrationTests", 
 		{E8FE6D48-FA4E-4FF0-A99C-1E3B689C371A} = {E8FE6D48-FA4E-4FF0-A99C-1E3B689C371A}
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Upp.Net.Platform.iOS", "Source\Upp.Net.Platform.iOS\Upp.Net.Platform.iOS.csproj", "{61169758-89F6-4487-B4B9-34A556F91704}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3933F446-CA0B-4F02-82E6-C36E39C336F6} = {3933F446-CA0B-4F02-82E6-C36E39C336F6}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{479d7c35-0bdf-460b-ad27-1a238c501317}*SharedItemsImports = 4
 		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{56a56f17-7de1-4ca1-9617-bf32e971ac84}*SharedItemsImports = 4
+		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{61169758-89f6-4487-b4b9-34a556f91704}*SharedItemsImports = 4
 		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{e1f4483b-2dc9-46c3-9818-3dabfebbbdcb}*SharedItemsImports = 13
 		Source\Upp.Net.Platform.Shared\Upp.Net.Platform.Shared.projitems*{e8fe6d48-fa4e-4ff0-a99c-1e3b689c371a}*SharedItemsImports = 4
 	EndGlobalSection
@@ -118,6 +124,18 @@ Global
 		{FF7A0504-EC59-4A1F-934D-5626FF1627D1}.Release|ARM.Build.0 = Release|Any CPU
 		{FF7A0504-EC59-4A1F-934D-5626FF1627D1}.Release|x64.ActiveCfg = Release|Any CPU
 		{FF7A0504-EC59-4A1F-934D-5626FF1627D1}.Release|x64.Build.0 = Release|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Debug|ARM.Build.0 = Debug|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Debug|x64.Build.0 = Debug|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Release|ARM.ActiveCfg = Release|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Release|ARM.Build.0 = Release|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Release|x64.ActiveCfg = Release|Any CPU
+		{61169758-89F6-4487-B4B9-34A556F91704}.Release|x64.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

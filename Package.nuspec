@@ -18,6 +18,11 @@
     <file src="bin/Android/AnyCPU/Release/Upp.Net.dll" target="lib/MonoAndroid60" />
     <file src="bin/Android/AnyCPU/Release/Upp.Net.pdb" target="lib/MonoAndroid60" />
 
+    <file src="bin/iOS/AnyCPU/Release/Upp.Net.Platform.dll" target="lib/Xamarin.iOS90" />
+    <file src="bin/iOS/AnyCPU/Release/Upp.Net.Platform.pdb" target="lib/Xamarin.iOS90" />
+    <file src="bin/iOS/AnyCPU/Release/Upp.Net.dll" target="lib/Xamarin.iOS90" />
+    <file src="bin/iOS/AnyCPU/Release/Upp.Net.pdb" target="lib/Xamarin.iOS90" />
+
     <file src="bin/Windows/x86/Release/Upp.Net.Platform.dll" target="lib/net452" />
     <file src="bin/Windows/x86/Release/Upp.Net.Platform.pdb" target="lib/net452" />
     <file src="bin/Windows/x86/Release/Upp.Net.dll" target="lib/net452" />
